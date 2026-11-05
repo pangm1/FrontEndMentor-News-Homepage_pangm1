@@ -3,58 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="News Homepage">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | News homepage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="./scripts/main.js"></script>
 </head>
 <body>
+  <header>
+    <nav class="menu">
+      <a href="#">
+        <img src="./assets/images/logo.svg" alt="News Logo">
+      </a>
+      <button type="button" class="icon-button" command="show-modal" commandfor="menu-list">
+        Open Navigation Menu
+      </button>
+      <dialog closedby="any" id="menu-list" aria-label="Menu">
+        <button type="button" class="icon-button" commandfor="menu-list" command="close">
+          Close Navigation Menu
+        </button>
+        <ul>
+          <li class="">
+            <a href="#home-page">
+              <button type="button" commandfor="menu-list" command="close">
+                Home
+              </button>
+            </a>
+          </li>
+          <li class="">
+            <a href="#new-section">
+              <button type="button" commandfor="menu-list" command="close">
+                New
+              </button>
+            </a>
+          </li>
+          <li class="">
+            <a href="#popular-section">
+              <button type="button" commandfor="menu-list" command="close">
+                Popular
+              </button>
+            </a>
+          </li>
+          <li class="">
+            <a href="#trending-section">
+              <button type="button" commandfor="menu-list" command="close">
+                Trending
+              </button>
+            </a>
+          </li>
+          <li class="">
+            <a href="#categories-section">
+              <button type="button" commandfor="menu-list" command="close">
+                Categories
+              </button>
+            </a>
+          </li>
+        </ul>
+      </dialog>
+    </nav>
+  </header>
+  <main>
+    <div class="visually-hidden" id="home-page"></div>
+    <section class="featured" id="featured-section">
+      <h2 class="visually-hidden">
+        Featured Article
+      </h2>
+      <picture>
+        <source srcset="./assets/images/image-web-3-desktop.jpg" media="(width >= 600pt)">
+        <img src="./assets/images/image-web-3-mobile.jpg" alt="">
+      </picture>
+      <h3 class="" id="featured-title">
+        The Bright Future of Web 3.0?
+      </h3>
+      <p class="">
+        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+      </p>
+      <button aria-describedby="featured-title">
+        Read More <span class="visually-hidden"></span>
+      </button>
+    </section>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+    <section class="new" id="new-section">
+      <h2>
+        New <span class="visually-hidden">Articles</span>
+      </h2>
+      <ul class="">
+        <li class="">
+          <h3 class="">
+            Hydrogen VS Electric Cars
+          </h3>
+          <p class="">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </li>
+        <li class="">
+          <h3 class="">
+            The Downsides of AI Artistry
+          </h3>
+          <p class="">
+            What are the possible adverse effects of on-demand AI image generation?
+          </p>
+        </li>
+        <li class="">
+          <h3 class="">
+            Is VC Funding Drying Up?
+          </h3>
+          <p class="">
+            Private funding by VC firms is down 50% YOY. We take a look at what that means.
+          </p>
+        </li>
+      </ul>
+    </section>
 
-  The Bright Future of Web 3.0?
+    <section class="popular" id="popular-section">
+      <h2 class="visually-hidden">
+        Popular <span class="visually-hidden">Articles</span>
+      </h2>
+      <ol>
+        <li>
+          <h3 class="">
+            Reviving Retro PCs
+          </h3>
+          <img src="./assets/images/image-retro-pcs.jpg" alt="">
+          <p class="">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </li>
+        <li>
+          <h3 class="">
+            Top 10 Laptops of 2022
+          </h3>
+          <img src="./assets/images/image-top-laptops.jpg" alt="">
+          <p class="">
+            Our best picks for various needs and budgets.
+          </p>
+        </li>
+        <li>
+          <h3 class="">
+            The Growth of Gaming
+          </h3>
+          <img src="./assets/images/image-gaming-growth.jpg" alt="">
+          <p class="">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </li>
+      </ol>
+    </section>
+  </main>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    </p>
+    <p>
+      Coded by <a href="https://www.frontendmentor.io/profile/pangm1">Michael Pang</a>.
+    </p>
   </footer>
 </body>
 </html>
