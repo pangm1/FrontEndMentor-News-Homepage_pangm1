@@ -19,16 +19,16 @@
       <span class="visually-hidden">Home</span>
     </a>
     <nav class="menu">
-      <button type="button" class="icon-button" command="show-modal" commandfor="menu-list">
+      <button type="button" class="icon-button" id="open-nav" command="show-modal" commandfor="menu-list">
         Open Navigation Menu
       </button>
       <dialog closedby="any" id="menu-list" aria-label="Menu">
-        <button type="button" class="icon-button" commandfor="menu-list" command="close">
+        <button type="button" class="icon-button" id="close-nav" commandfor="menu-list" command="close">
           Close Navigation Menu
         </button>
         <ul>
           <li class="">
-            <a href="#home-page" tabindex="-1">
+            <a href="#" tabindex="-1">
               <button type="button" commandfor="menu-list" command="close" role="link">
                 Home
               </button>
