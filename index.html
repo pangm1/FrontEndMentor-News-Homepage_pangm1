@@ -14,10 +14,11 @@
 </head>
 <body>
   <header>
+    <a href="#">
+      <img src="./assets/images/logo.svg" alt="News Logo" id="home-logo" aria-hidden="true">
+      <span class="visually-hidden">Home</span>
+    </a>
     <nav class="menu">
-      <a href="#">
-        <img src="./assets/images/logo.svg" alt="News Logo">
-      </a>
       <button type="button" class="icon-button" command="show-modal" commandfor="menu-list">
         Open Navigation Menu
       </button>
@@ -27,35 +28,35 @@
         </button>
         <ul>
           <li class="">
-            <a href="#home-page">
-              <button type="button" commandfor="menu-list" command="close">
+            <a href="#home-page" tabindex="-1">
+              <button type="button" commandfor="menu-list" command="close" role="link">
                 Home
               </button>
             </a>
           </li>
           <li class="">
-            <a href="#new-section">
+            <a href="#new-section" tabindex="-1">
               <button type="button" commandfor="menu-list" command="close">
                 New
               </button>
             </a>
           </li>
           <li class="">
-            <a href="#popular-section">
+            <a href="#popular-section" tabindex="-1">
               <button type="button" commandfor="menu-list" command="close">
                 Popular
               </button>
             </a>
           </li>
           <li class="">
-            <a href="#trending-section">
+            <a href="#trending-section" tabindex="-1">
               <button type="button" commandfor="menu-list" command="close">
                 Trending
               </button>
             </a>
           </li>
           <li class="">
-            <a href="#categories-section">
+            <a href="#categories-section" tabindex="-1">
               <button type="button" commandfor="menu-list" command="close">
                 Categories
               </button>
@@ -81,9 +82,9 @@
       <p class="">
         We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
       </p>
-      <button aria-describedby="featured-title">
-        Read More <span class="visually-hidden"></span>
-      </button>
+      <a href="#" aria-labelledby="featured-title" class="button">
+        Read More
+      </a>
     </section>
 
     <section class="new" id="new-section">
