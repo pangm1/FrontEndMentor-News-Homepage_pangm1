@@ -1,0 +1,11 @@
+CSS:
+hover, focus, active states
+animations
+scrolling animations
+
+
+Javascript:
+fix tabbing order of desktop mode
+make sure dialog is automatically open (cannot block other inputs)
+
+test using screenreader, keyboard-only, mouse, mouse + keyboard
