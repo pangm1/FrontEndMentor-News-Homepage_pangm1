@@ -1,7 +1,7 @@
 CSS:
 hover, focus, active states
 animations
-scrolling animations
+scrolling animations        
 
 
 Javascript:
