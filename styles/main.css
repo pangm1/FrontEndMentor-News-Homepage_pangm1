@@ -71,15 +71,20 @@ img {
     align-self: center;
 
     display: block;
-    mask-image: var(--icon);
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    background-color: currentColor;
 
     --icon-height: 5;
     --icon-width: 5;
     --icon-aspect-ratio: var(--icon-width) / var(--icon-height);
-    
+
+    &::after {
+        content: "";
+        display: block;
+        block-size: 100%;
+        mask-image: var(--icon);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        background-color: currentColor;
+    }
 }
 
 body {
